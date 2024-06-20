@@ -6,4 +6,8 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
 
-message: Servicio de registro y descubrimiento levantado en el servidor!
+spring:
+  config:
+    import: optional:configserver:
+
+# message: Servicio de registro y descubrimiento levantado en el servidor!
