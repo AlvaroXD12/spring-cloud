@@ -1,5 +1,11 @@
 server:
   port: ${PORT:8866}
+eureka:
+  client:
+    register-with-eureka: true
+    # fetch-registry: false
+    serviceurl:
+      defaultZone: http://localhost:8850/eureka/  
 message: Configuracion de la categoria en el servidor levantado
 spring:
   datasource:
@@ -15,9 +21,3 @@ spring:
 cloud:
   config:
     url: http://localhost:8860
-eureka:
-  client:
-    register-with-eureka: true
-    # fetch-registry: false
-    serviceurl:
-      defaultZone: http://localhost:8850/eureka/
