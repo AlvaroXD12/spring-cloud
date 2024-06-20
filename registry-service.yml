@@ -7,10 +7,7 @@ eureka:
     register-with-eureka: false
 
 spring:
-  cloud:
-    config:
-      enabled: false
-      import-check:
-        enabled: false
+  config:
+    import: optional:configserver:
 
 # message: Servicio de registro y descubrimiento levantado en el servidor!
